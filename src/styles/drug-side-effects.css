@@ -1,0 +1,240 @@
+/* ===========================
+   Drug Side Effects Page
+   =========================== */
+
+/* ===========================
+   Approach Timeline
+   =========================== */
+.approach-timeline {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.approach-item {
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+
+.approach-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 32px;
+}
+
+.approach-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(96, 165, 250, 0.15);
+  border: 1.5px solid rgba(96, 165, 250, 0.3);
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.approach-dot--fail {
+  background: rgba(248, 113, 113, 0.12);
+  border-color: rgba(248, 113, 113, 0.3);
+}
+
+.approach-dot--success {
+  background: rgba(74, 222, 128, 0.18);
+  border-color: rgba(74, 222, 128, 0.4);
+}
+
+.approach-line {
+  width: 1.5px;
+  flex: 1;
+  background: rgba(255, 255, 255, 0.06);
+  min-height: 20px;
+}
+
+.approach-content {
+  padding-bottom: 28px;
+  max-width: 720px;
+}
+
+.approach-content h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.approach-content p {
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.approach-verdict {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  padding: 2px 8px;
+  border-radius: 3px;
+  margin-top: 8px;
+  letter-spacing: 0.03em;
+}
+
+.approach-verdict--fail {
+  color: #f87171;
+  background: rgba(248, 113, 113, 0.08);
+  border: 1px solid rgba(248, 113, 113, 0.15);
+}
+
+.approach-verdict--partial {
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.08);
+  border: 1px solid rgba(251, 191, 36, 0.15);
+}
+
+.approach-verdict--success {
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.08);
+  border: 1px solid rgba(74, 222, 128, 0.15);
+}
+
+/* ===========================
+   Embedding Scatter Visual
+   =========================== */
+.scatter-container {
+  margin-top: 24px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.scatter-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===========================
+   Cluster Keywords Visual
+   =========================== */
+.cluster-keywords-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.cluster-keyword-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 24px;
+}
+
+.cluster-keyword-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.cluster-keyword-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.cluster-keyword-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cluster-keyword-count {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  margin-left: auto;
+}
+
+.cluster-keyword-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cluster-keyword-list li {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.cluster-keyword-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.4;
+}
+
+/* ===========================
+   Results Stats
+   =========================== */
+.results-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.results-stat {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px;
+}
+
+.results-stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.results-stat-value--accent { color: var(--accent); }
+.results-stat-value--green { color: #4ade80; }
+.results-stat-value--purple { color: #a78bfa; }
+
+.results-stat-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+@media (max-width: 768px) {
+  .cluster-keywords-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .results-stats {
+    grid-template-columns: 1fr;
+  }
+}
