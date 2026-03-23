@@ -97,6 +97,40 @@
 }
 
 /* ===========================
+   Language Toggle
+   =========================== */
+.lang-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  transition: border-color 0.2s ease;
+  line-height: 1;
+}
+
+.lang-toggle:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.lang-sep {
+  margin: 0 6px;
+  opacity: 0.3;
+}
+
+.lang-active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ===========================
    Footer
    =========================== */
 .footer {

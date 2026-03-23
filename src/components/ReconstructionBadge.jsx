@@ -1,7 +1,11 @@
+import { useLang } from '../context/LanguageContext'
+import content from '../data/content'
+
 export default function ReconstructionBadge() {
+  const { lang } = useLang()
   return (
     <span className="reconstruction-badge">
-      Reconstructed for portfolio
+      {content.shared[lang].reconstructionBadge}
     </span>
   )
 }

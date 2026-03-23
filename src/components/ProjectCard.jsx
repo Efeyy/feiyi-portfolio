@@ -1,11 +1,21 @@
 import { Link } from 'react-router-dom'
+import { useLang } from '../context/LanguageContext'
+import content from '../data/content'
 
-export default function ProjectCard({ title, subtitle, description, tags, thumbnail, link, overlay }) {
+export default function ProjectCard({ id, title, subtitle, description, tags, thumbnail, link, overlay }) {
+  const { lang } = useLang()
+  const t = content.projects[lang][id] || {}
+  const cta = content.home[lang].viewCaseStudy
+
+  const displayTitle = t.title || title
+  const displaySubtitle = t.subtitle || subtitle
+  const displayDesc = t.description || description
+
   return (
     <Link to={link} className="project-card" style={{ textDecoration: 'none' }}>
       <div className="project-card-thumbnail">
         {thumbnail ? (
-          <img src={thumbnail} alt={title} />
+          <img src={thumbnail} alt={displayTitle} />
         ) : (
           <div className="project-card-placeholder" />
         )}
@@ -13,23 +23,23 @@ export default function ProjectCard({ title, subtitle, description, tags, thumbn
         {overlay === 'embedding-scatter' && <EmbeddingScatterOverlay />}
       </div>
       <div className="project-card-body">
-        {subtitle && (
+        {displaySubtitle && (
           <span className="project-card-subtitle">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.8, flexShrink: 0 }}>
               <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
             </svg>
-            {subtitle}
+            {displaySubtitle}
           </span>
         )}
-        <h3 className="project-card-title">{title}</h3>
-        <p className="project-card-description">{description}</p>
+        <h3 className="project-card-title">{displayTitle}</h3>
+        <p className="project-card-description">{displayDesc}</p>
         <div className="project-card-tags">
           {tags.map((tag) => (
             <span key={tag} className="tag">{tag}</span>
           ))}
         </div>
         <span className="project-card-cta">
-          View Case Study &rarr;
+          {cta}
         </span>
       </div>
     </Link>
