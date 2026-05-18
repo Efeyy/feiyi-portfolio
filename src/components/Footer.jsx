@@ -12,7 +12,7 @@ export default function Footer() {
         <ul className="footer-links">
           <li><a href="mailto:fei.yi@emory.edu">Email</a></li>
           <li><a href="https://linkedin.com/in/fei-yi/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://github.com/Efeyy" target="_blank" rel="noopener noreferrer">GitHub</a></li>
         </ul>
       </div>
     </footer>

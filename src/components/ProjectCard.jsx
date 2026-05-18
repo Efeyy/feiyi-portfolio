@@ -21,6 +21,8 @@ export default function ProjectCard({ id, title, subtitle, description, tags, th
         )}
         {overlay === 'cloud-network' && <CloudNetworkOverlay />}
         {overlay === 'embedding-scatter' && <EmbeddingScatterOverlay />}
+        {overlay === 'forecast-grid' && <ForecastGridOverlay />}
+        {overlay === 'discourse-network' && <DiscourseNetworkOverlay />}
       </div>
       <div className="project-card-body">
         {displaySubtitle && (
@@ -43,6 +45,51 @@ export default function ProjectCard({ id, title, subtitle, description, tags, th
         </span>
       </div>
     </Link>
+  )
+}
+
+function ForecastGridOverlay() {
+  const actual = '60,130 95,118 130,128 165,92 200,108 235,82 270,96 305,70 340,86 375,66 410,74 445,54 480,62 520,48'
+  const forecast = '410,74 445,58 480,66 520,50'
+
+  return (
+    <svg className="cloud-network-overlay" viewBox="0 0 600 200" preserveAspectRatio="xMidYMid slice">
+      {[40, 70, 100, 130, 160].map(y => (
+        <line key={y} x1="40" y1={y} x2="560" y2={y} stroke="rgba(96,165,250,0.06)" strokeWidth="0.8" />
+      ))}
+      {[80, 140, 200, 260, 320, 380, 440, 500].map(x => (
+        <line key={x} x1={x} y1="28" x2={x} y2="174" stroke="rgba(255,255,255,0.035)" strokeWidth="0.8" />
+      ))}
+      <polyline points={actual} fill="none" stroke="rgba(96,165,250,0.42)" strokeWidth="2.2" strokeLinejoin="round" />
+      <polyline points={forecast} fill="none" stroke="rgba(74,222,128,0.42)" strokeWidth="2.2" strokeDasharray="5 4" strokeLinejoin="round" />
+      <rect x="58" y="34" width="112" height="32" rx="4" fill="rgba(6,6,8,0.52)" stroke="rgba(255,255,255,0.08)" />
+      <text x="72" y="53" fontSize="11" fontFamily="monospace" fill="rgba(230,240,255,0.72)">168h to 24h</text>
+      {[80, 115, 150, 185, 220, 255, 290].map((x, i) => (
+        <rect key={x} x={x} y={146 - (i % 3) * 8} width="22" height="22" rx="3" fill="rgba(96,165,250,0.08)" stroke="rgba(96,165,250,0.12)" />
+      ))}
+    </svg>
+  )
+}
+
+function DiscourseNetworkOverlay() {
+  const nodes = [
+    [88, 78, 12], [150, 116, 8], [230, 72, 10], [315, 118, 13],
+    [410, 68, 9], [485, 122, 11], [535, 78, 7], [270, 145, 7],
+  ]
+
+  return (
+    <svg className="cloud-network-overlay" viewBox="0 0 600 200" preserveAspectRatio="xMidYMid slice">
+      <path d="M70,150 C150,88 230,120 300,96 S450,56 540,126" fill="none" stroke="rgba(96,165,250,0.12)" strokeWidth="1.4" />
+      <path d="M70,68 C160,130 260,40 340,112 S460,150 540,76" fill="none" stroke="rgba(244,114,182,0.10)" strokeWidth="1.2" />
+      {nodes.map(([x1, y1], i) => nodes.slice(i + 1).map(([x2, y2], j) => (
+        ((i + j) % 3 === 0) && <line key={`${i}-${j}`} x1={x1} y1={y1} x2={x2} y2={y2} stroke="rgba(255,255,255,0.035)" strokeWidth="0.8" />
+      )))}
+      {nodes.map(([x, y, r], i) => (
+        <circle key={i} cx={x} cy={y} r={r} fill={i % 2 ? 'rgba(96,165,250,0.18)' : 'rgba(244,114,182,0.16)'} stroke="rgba(255,255,255,0.16)" strokeWidth="0.8" />
+      ))}
+      <rect x="360" y="144" width="134" height="28" rx="4" fill="rgba(6,6,8,0.52)" stroke="rgba(255,255,255,0.08)" />
+      <text x="374" y="162" fontSize="10.5" fontFamily="monospace" fill="rgba(230,240,255,0.72)">1.57M posts + ECM</text>
+    </svg>
   )
 }
 

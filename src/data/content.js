@@ -13,14 +13,14 @@ const content = {
   hero: {
     en: {
       title: 'Fei Yi',
-      subtitle: 'Data Science & AI \u00b7 Emory University',
-      pitch: 'I build data systems that turn messy real-world data into structured, actionable insight. Focused on NLP, applied machine learning, and product-oriented data science.',
+      subtitle: 'Data Science & AI \u00b7 Emory University Graduate',
+      pitch: 'I build data systems that turn messy real-world data into structured, actionable insight. My work spans applied machine learning, time-series forecasting, NLP, and product-facing analytics.',
       resume: 'Resume',
     },
     zh: {
       title: '易非',
-      subtitle: '数据科学与 AI \u00b7 Emory University',
-      pitch: '专注于将复杂真实数据转化为可落地的洞察。研究方向涵盖 NLP、应用机器学习与产品导向的数据科学。',
+      subtitle: '数据科学与 AI \u00b7 Emory University 毕业生',
+      pitch: '专注于将复杂真实数据转化为可落地的洞察。实践方向涵盖应用机器学习、时间序列预测、NLP 与产品导向的数据分析。',
       resume: '简历',
     },
   },
@@ -36,9 +36,9 @@ const content = {
       about: 'About',
       contact: 'Contact',
       viewCaseStudy: 'View Case Study \u2192',
-      aboutP1: "I'm a Data Science student at Emory University, focused on building systems that turn real-world data into usable insight.",
-      aboutP2: 'My experience spans applied machine learning, NLP, and data-driven product design \u2014 from forecasting models at Tencent to user behavior analysis at Atmosfy.',
-      aboutP3: "I'm currently working on research in AI agent dynamics and game theory, exploring how intelligent systems interact under constraints.",
+      aboutP1: "I'm a Data Science and AI graduate from Emory University, focused on building systems that turn real-world data into usable insight.",
+      aboutP2: 'My experience spans client demand forecasting at Tencent Cloud, user behavior analysis at Atmosfy, and ML research in time-series forecasting and NLP.',
+      aboutP3: 'I like work where modeling, data engineering, and product context meet: messy inputs, clear analytical structure, and outputs people can actually use.',
       skillCategories: {
         languages: 'Languages',
         mlNlp: 'ML / NLP',
@@ -53,9 +53,9 @@ const content = {
       about: '关于',
       contact: '联系方式',
       viewCaseStudy: '查看案例 \u2192',
-      aboutP1: 'Emory University 数据科学方向本科生，专注于构建将真实数据转化为可用洞察的系统。',
-      aboutP2: '实践经验涵盖应用机器学习、NLP 与数据驱动的产品设计 \u2014 从腾讯云的 forecasting 模型到 Atmosfy 的用户行为分析。',
-      aboutP3: '目前正在进行 AI agent 博弈论方向的研究，探索智能系统在约束条件下的交互机制。',
+      aboutP1: 'Emory University 数据科学与 AI 方向毕业生，专注于构建将真实数据转化为可用洞察的系统。',
+      aboutP2: '实践经验涵盖腾讯云客户需求预测、Atmosfy 用户行为分析，以及时间序列 forecasting 和 NLP 方向的机器学习研究。',
+      aboutP3: '我偏好位于建模、数据工程与产品语境交汇处的问题：输入可以很复杂，但输出应该清晰、可解释、能被真正使用。',
       skillCategories: {
         languages: '编程语言',
         mlNlp: 'ML / NLP',
@@ -79,9 +79,13 @@ const content = {
         title: 'Drug Side Effects \u2014 NLP Clustering Analysis',
         description: 'Unsupervised clustering on 2,900+ drugs reveals that pharmacological similarity is captured by adverse effect profiles, not names or conditions \u2014 and that representation matters more than algorithm choice.',
       },
-      'campus-advisory': {
-        title: 'AI-Powered Campus Advisory System',
-        description: 'A ChatGPT-based course selection and campus resource platform that transforms fragmented university data into personalized academic guidance.',
+      'gridstateformer': {
+        title: 'GridStateFormer — Electricity Demand Forecasting',
+        description: 'Hybrid PatchTST and state-space model for next-day electricity demand forecasting across 148 EIA regions, outperforming GRU, LSTM, TCN, CNN, and seasonal-naive baselines.',
+      },
+      'ice-discourse': {
+        title: 'ICE Social Media Discourse Analysis',
+        description: 'Large-scale political text and time-series analysis of 1.57M federal official posts, modeling event shocks and attention cycles with Error Correction Models.',
       },
     },
     zh: {
@@ -94,9 +98,13 @@ const content = {
         title: '药物副作用 \u2014 NLP Clustering 分析',
         description: '对 2,900+ 种药物进行无监督 clustering，发现药理相似性更多体现在副作用特征而非药名或适应症 \u2014 数据表征比算法选择更重要。',
       },
-      'campus-advisory': {
-        title: 'AI 驱动的校园咨询系统',
-        description: '基于 ChatGPT API 的选课与校园资源平台，将分散的大学数据整合为个性化的学术指导服务。',
+      'gridstateformer': {
+        title: 'GridStateFormer — 电力需求预测',
+        description: '结合 PatchTST 与 state-space rollout 的次日电力需求预测模型，覆盖 148 个 EIA 区域，并优于 GRU、LSTM、TCN、CNN 与 seasonal-naive 基线。',
+      },
+      'ice-discourse': {
+        title: 'ICE 社交媒体话语分析',
+        description: '对 157 万条联邦官员社交媒体帖文进行大规模政治文本与时间序列分析，并使用 ECM 建模事件冲击与注意力周期。',
       },
     },
   },

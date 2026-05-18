@@ -32,7 +32,7 @@ export default function Home() {
               LinkedIn
             </a>
             <a
-              href="https://github.com/"
+              href="https://github.com/Efeyy"
               target="_blank"
               rel="noopener noreferrer"
               className="hero-link"
@@ -76,6 +76,7 @@ export default function Home() {
                 <span className="skill-tag">Python</span>
                 <span className="skill-tag">R</span>
                 <span className="skill-tag">SQL</span>
+                <span className="skill-tag">JavaScript</span>
               </div>
             </div>
             <div className="skills-category">
@@ -85,7 +86,8 @@ export default function Home() {
                 <span className="skill-tag">PyTorch</span>
                 <span className="skill-tag">NLTK</span>
                 <span className="skill-tag">TF-IDF</span>
-                <span className="skill-tag">LDA</span>
+                <span className="skill-tag">Time Series</span>
+                <span className="skill-tag">ECM</span>
               </div>
             </div>
             <div className="skills-category">
@@ -95,6 +97,7 @@ export default function Home() {
                 <span className="skill-tag">NumPy</span>
                 <span className="skill-tag">Matplotlib</span>
                 <span className="skill-tag">Seaborn</span>
+                <span className="skill-tag">Dashboards</span>
               </div>
             </div>
             <div className="skills-category">
@@ -104,6 +107,8 @@ export default function Home() {
                 <span className="skill-tag">Jupyter</span>
                 <span className="skill-tag">VS Code</span>
                 <span className="skill-tag">Google Analytics</span>
+                <span className="skill-tag">ChatGPT API</span>
+                <span className="skill-tag">AI-assisted coding</span>
               </div>
             </div>
           </div>
@@ -137,7 +142,7 @@ export default function Home() {
               LinkedIn
             </a>
             <a
-              href="https://github.com/"
+              href="https://github.com/Efeyy"
               target="_blank"
               rel="noopener noreferrer"
               className="contact-link"

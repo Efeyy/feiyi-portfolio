@@ -5,7 +5,8 @@ import Footer from './components/Footer'
 import Home from './pages/Home'
 import TencentDashboard from './pages/TencentDashboard'
 import DrugSideEffects from './pages/DrugSideEffects'
-import CampusAdvisory from './pages/CampusAdvisory'
+import GridStateFormer from './pages/GridStateFormer'
+import IceDiscourse from './pages/IceDiscourse'
 import Resume from './pages/Resume'
 
 export default function App() {
@@ -18,7 +19,8 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/projects/tencent-dashboard" element={<TencentDashboard />} />
             <Route path="/projects/drug-side-effects" element={<DrugSideEffects />} />
-            <Route path="/projects/campus-advisory" element={<CampusAdvisory />} />
+            <Route path="/projects/gridstateformer" element={<GridStateFormer />} />
+            <Route path="/projects/ice-discourse" element={<IceDiscourse />} />
             <Route path="/resume" element={<Resume />} />
           </Routes>
         </main>

@@ -21,13 +21,24 @@ const projects = [
     link: '/projects/drug-side-effects',
   },
   {
-    id: 'campus-advisory',
-    title: 'AI-Powered Campus Advisory System',
+    id: 'gridstateformer',
+    title: 'GridStateFormer — Electricity Demand Forecasting',
     description:
-      'A ChatGPT-based course selection and campus resource platform that transforms fragmented university data into personalized academic guidance.',
-    tags: ['Python', 'ChatGPT API', 'Data Pipeline', 'Product Design'],
+      'Hybrid PatchTST and state-space model for next-day electricity demand forecasting across 148 EIA regions, outperforming recurrent and convolutional baselines.',
+    tags: ['PyTorch', 'Time Series', 'Forecasting', 'EIA', 'State Space'],
     thumbnail: null,
-    link: '/projects/campus-advisory',
+    overlay: 'forecast-grid',
+    link: '/projects/gridstateformer',
+  },
+  {
+    id: 'ice-discourse',
+    title: 'ICE Social Media Discourse Analysis',
+    description:
+      'Large-scale political text and time-series analysis of 1.57M federal official posts, modeling event shocks and attention cycles with ECM.',
+    tags: ['Python', 'Scraping', 'ECM', 'NLP', 'Time Series'],
+    thumbnail: null,
+    overlay: 'discourse-network',
+    link: '/projects/ice-discourse',
     secondary: true,
   },
 ]
